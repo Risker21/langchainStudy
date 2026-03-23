@@ -74,4 +74,9 @@ agent = create_agent(
 )
 # 3. 调用
 response = agent.invoke({"messages": [{"role":"user","content":"查询红楼梦的信息"}]})
-print(response)
+
+for resp  in response["messages"]:
+    resp.pretty_print()
+
+
+
